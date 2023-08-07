@@ -3,7 +3,7 @@ const Product = require('./product');
 const Tag = require('./tag');
 const ProductTag = require('./productTag');
 
-// Define associations
+// Associations
 Category.hasMany(Product, {
     foreignKey: 'categoryId',
 });
