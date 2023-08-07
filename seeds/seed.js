@@ -2,10 +2,10 @@ const sequelize = require('../config/connection');
 const { Category, Product, Tag, ProductTag } = require('../models');
 
 // .json files that I'm grabbing data from
-const categorySeedData = require('./categorySeedData.json');
-const productSeedData = require('./productSeedData.json');
-const tagSeedData = require('./tagSeedData.json');
-const productTagSeedData = require('./productTagSeedData.json');
+const categorySeedData = require('./categoryData.json');
+const productSeedData = require('./productData.json');
+const tagSeedData = require('./tagData.json');
+const productTagSeedData = require('./productTagData.json');
 
 const seedDatabase = async () => {
     await sequelize.sync({ force: true });
