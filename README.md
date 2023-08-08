@@ -20,3 +20,5 @@ In order to successfully run this application you must first:
 Lastly, navigate to a tool like Postman or Insomnia to make HTTP requests to the API endpoints!
 
 ## Walkthrough Video
+
+https://drive.google.com/file/d/1WDgpSguWGN21K4O1dbYUtOOQeDMULqvP/view
