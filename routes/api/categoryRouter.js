@@ -58,7 +58,7 @@ categoryRouter.put('/:id', async (req, res) => {
 categoryRouter.delete('/:id', async (req, res) => {
     try {
         const categoryId = req.params.id;
-        const deletedId = await Post.destroy({
+        const deletedId = await Category.destroy({
             where: { id: categoryId },
         }); // Delete post with the provided ID
         if (deletedId === 1) {
