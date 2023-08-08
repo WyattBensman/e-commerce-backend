@@ -3,7 +3,7 @@ const productRouter = express.Router();
 const { Product } = require('../../models');
 
 // Route to get a list of all Categories
-router.get('/', async (req, res) => {
+productRouter.get('/', async (req, res) => {
     try {
         const allProducts = await Product.findAll();
         res.json(allProducts);
@@ -13,7 +13,7 @@ router.get('/', async (req, res) => {
 });
 
 // Route to get a specific Category by ID
-router.get('/:id', async (req, res) => {
+productRouter.get('/:id', async (req, res) => {
     try {
         const productId = req.params.id;
         const product = await Product.findByPk(productId);
@@ -28,7 +28,7 @@ router.get('/:id', async (req, res) => {
 });
 
 // Route to update a specific post by ID
-router.put('/:id', async (req, res) => {
+productRouter.put('/:id', async (req, res) => {
     try {
         const productId = req.params.id;
         const updatedId = await Product.update(req.body, {
@@ -45,7 +45,7 @@ router.put('/:id', async (req, res) => {
 });
 
 // Route to delete a specific post by ID
-router.delete('/:id', async (req, res) => {
+productRouter.delete('/:id', async (req, res) => {
     try {
         const productId = req.params.id;
         const deletedId = await Product.destroy({
