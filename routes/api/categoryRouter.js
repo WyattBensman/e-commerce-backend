@@ -45,7 +45,7 @@ categoryRouter.put('/:id', async (req, res) => {
 });
 
 // Route to delete a specific post by ID
-categoryRouter.delete('/api/posts/:id', async (req, res) => {
+categoryRouter.delete('/:id', async (req, res) => {
     try {
         const categoryId = req.params.id;
         const deletedId = await Post.destroy({

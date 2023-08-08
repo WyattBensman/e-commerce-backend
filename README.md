@@ -9,6 +9,7 @@ While not a deployed application, we're demonstrating its functionality through 
 ## Usage
 
 In order to successfully run this application you must first:
+
 1. Make sure you have Node.js & MySQL on your device
 2. Clone & Navigate to the Repository
 3. 'npm install' to install dependencies
