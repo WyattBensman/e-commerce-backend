@@ -5,7 +5,7 @@ const { Tag } = require('../../models');
 // Route to get a list of all Categories
 tagRouter.get('/', async (req, res) => {
     try {
-        const allTags = await Product.findAll();
+        const allTags = await Tag.findAll();
         res.json(allTags);
     } catch (err) {
         res.status(500).json({ error: 'Failed to get categories!' });
@@ -24,6 +24,16 @@ tagRouter.get('/:id', async (req, res) => {
         }
     } catch (err) {
         res.status(500).json({ error: 'Failed to get the post' });
+    }
+});
+
+// Route to create a new item
+tagRouter.post('/', async (req, res) => {
+    try {
+        const newItem = await Tag.create(req.body); // Assuming the request body contains the new item data
+        res.status(201).json(newItem); // Return the newly created post as the response
+    } catch (err) {
+        res.status(500).json({ error: 'Failed to create the item' });
     }
 });
 

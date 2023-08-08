@@ -27,6 +27,16 @@ productTagRouter.get('/:id', async (req, res) => {
     }
 });
 
+// Route to create a new item
+productTagRouter.post('/', async (req, res) => {
+    try {
+        const newItem = await ProductTag.create(req.body); // Assuming the request body contains the new item data
+        res.status(201).json(newItem); // Return the newly created post as the response
+    } catch (err) {
+        res.status(500).json({ error: 'Failed to create the item' });
+    }
+});
+
 // Route to update a specific post by ID
 productTagRouter.put('/:id', async (req, res) => {
     try {
